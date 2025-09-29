@@ -1,3 +1,5 @@
 #include <string>
+using namespace std;
 
-std::string hello();
+int find(const string& str, char target);
+int find(const string& str, const string& target);

@@ -5,6 +5,22 @@
 
 #include "../src/where.hpp"
 
-TEST_CASE( "it returns Hello World" ) {
-    REQUIRE( hello() == "Hello World!" );
+TEST_CASE( "The quick brown fox" ) {
+    REQUIRE( find("The quick brown fox", 'e') == 2 );
+}
+
+TEST_CASE("The quick brown fox") {
+    REQUIRE( find("The quick brown fox", "e") == 2);
+}
+
+TEST_CASE("The quick brown fox") {
+    REQUIRE( find("The quick brown fox"," ") == 3);
+}
+
+TEST_CASE("The quick brown fox") {
+    REQUIRE( find("The quick brown fox", "quick") == 4);
+}
+
+TEST_CASE("The quick brown fox") {
+    REQUIRE( find("The quick brown fox", "quiet") == -1);
 }
